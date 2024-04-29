@@ -1,24 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     overflow: hidden;
 }
-.wrapper{
+
+.wrapper {
     position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
 }
-.formInput{
+
+.formInput {
     position: absolute;
     top: -100%;
-    width: 40%;
+    width: 90%; /* Điều chỉnh chiều rộng */
     left: 50%;
     transform: translateX(-50%);
     background-color: #EA4C89;
@@ -34,15 +38,17 @@ body{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     animation: formInput 1s 3s forwards;
 }
+
 @keyframes formInput {
-    0%{
+    0% {
         top: -100%;
     }
-    100%{
+    100% {
         top: 20px;
     }
 }
-.formInput::before{
+
+.formInput::before {
     position: absolute;
     content: '';
     width: 8px;
@@ -52,7 +58,8 @@ body{
     left: 20%;
     z-index: -10;
 }
-.formInput::after{
+
+.formInput::after {
     position: absolute;
     content: '';
     width: 8px;
@@ -62,13 +69,18 @@ body{
     right: 20%;
     z-index: -1;
 }
-.boxHands{
+
+.boxHands {
     position: absolute;
     display: flex;
     justify-content: center;
-    top: -40%;
+    top: -30%; /* Điều chỉnh vị trí */
     animation: handsCat 1s 4s forwards ease-in;
 }
+
+/* Các đoạn CSS còn lại không có thay đổi lớn, chỉ cần điều chỉnh một số giá trị như chiều rộng và vị trí */
+
+
 @keyframes handsCat{
     0%{
         top: -40%;
@@ -269,7 +281,7 @@ body{
 .boxCar{
     position: absolute;
     bottom: 15%;
-    transform: translateX(-400px);
+    transform: translateX(-50px);
     z-index: 2;
     animation: car 4s 1s forwards, car1 2s 5s forwards;
 }
@@ -638,7 +650,7 @@ body{
     position: absolute;
     width: 180px;
     bottom: -10px;
-    left: 50px;
+    left: -10px;
     z-index: 100;
 }
 .giftbox img{
@@ -646,7 +658,7 @@ body{
 }
 .textLetter{
     position: relative;
-    width: 60%;
+    width: 65%;
     flex-direction: column;
     display: flex;
     align-items: center;
@@ -654,17 +666,18 @@ body{
 }
 .textLetter h2{
     margin-top: 20px;
-    font-size: 30px;
+    font-size: 25px;
     font-family: 'Dancing Script', cursive;
 }
 .textLetter .contentLetter{
-    font-size: 19px;
+    font-size: 15px;
     text-align: center;
     padding: 0px 10px;
     margin-top: 10px;
     font-family: 'Dancing Script', cursive;
-
+word-wrap: break-word; /* Thêm thuộc tính word-wrap */
 }
+
 .fa-xmark{
     position: absolute;
     right: 20px;
@@ -699,6 +712,3 @@ body{
 .mewmew1 img, .mewmew2 img{
     width: 100%;
 }
-
-
-
